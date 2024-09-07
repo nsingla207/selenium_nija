@@ -24,4 +24,3 @@ class expedia:
 
 obj=expedia()
 obj.traveler()
-pdf-eefi-vom
