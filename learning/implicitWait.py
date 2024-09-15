@@ -4,6 +4,7 @@ import os
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
 
 
 class learnWait:
@@ -19,16 +20,17 @@ class learnWait:
 
         print(filepath)
 
-        driver=webdriver.Chrome()
+        driver=webdriver.Edge()
         driver.implicitly_wait(3)
-        driver.implicitly_wait(1)
         driver.get(filepath)
         print(datetime.now())
         element=driver.find_element(By.XPATH,"//input[@type='text']")
         element.send_keys("test")
         print(datetime.now())               
         print(" input value is : ", element.get_attribute('value'))   
+        print("**********")
 
+        #element = webDriverWait(driver,10).until()
 
 
 obj=learnWait()
