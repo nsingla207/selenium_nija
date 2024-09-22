@@ -10,10 +10,11 @@ class commonForLocator:
     
     def getlocator(self,locatorType):
 
-        lctype=locatorType.lower()
-        if lctype=="id" :
+        print("inside the getlocator")
+        lcType=locatorType.lowwer()
+        if lcType == "id":
             return By.ID
-        elif lctype=="xpath" :
+        elif lcType == "xpath":
             return By.XPATH
         
     
